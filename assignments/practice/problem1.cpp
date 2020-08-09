@@ -1,7 +1,6 @@
 /** @file problem1.cpp
- *  @brief Give a description of the file 
+ *  @brief connects to thingers.io and sends data through MQTT protocol using Shunya Interfaces
  *  
- *  Give full description of the file 
  *  
  *  @author Dibyendu Biswas 
  *  @bug I didn't find any 
@@ -91,7 +90,7 @@ void Fclose(FILE *fp)
 /** 
  *  @brief Description on main
  *  
- *  Full description of the function
+ *  Connects to thingers.io and sends data through MQTT protocol using Shunya Interfaces
  *
  *  @return List all Function returns 
  */
