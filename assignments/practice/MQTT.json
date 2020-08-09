@@ -1,0 +1,22 @@
+{
+    "mqtt": {
+        "brokerUrl": "cme.aws.thinger.io:1883",
+        "userName": "Shunya",
+        "password": "shunya",
+        "clientID": "Shunya pi3"
+    },
+    "device":{
+        "deviceType": ""  ,
+        "deviceIdentifier": "" ,
+        "deviceDescription": "",
+        "deviceCredential": ""
+    },
+    "bucket":{
+        "bucketId":"",
+        "buckerName": "",
+        "bucketDescription": "",
+        "Enabled": "",
+        "dataSource": ""
+    }
+
+}  

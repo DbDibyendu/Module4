@@ -89,22 +89,6 @@ void Fclose(FILE *fp)
 
 
 /** 
- *  @brief Timestamp
- *  
- *  returns timestamp of linux system
- *
- *  @return integer valude of timestamp
- */
-
-long Time_Stamp()
-{       
-          unsigned long timestamp=(unsigned long)time(NULL);                         //getting the value of timestamp
-          return timestamp;
-        
-	
-}
-
-/** 
  *  @brief Description on main
  *  
  *  Full description of the function
@@ -116,15 +100,33 @@ int main ()
 {
         /* Initialize the Library*/
         initLib();
+        
+        /* 1. Parse a JSON string into DOM. */
+        /* Open the example.json file in read mode */
+        FILE* fp = Fopen("MQTT.json", "rb"); 
 
-        int time=Time_Stamp();
-        cout<<time<<endl;
+        /* Declare read buffer */
+        char readBuffer[65536];
 
+        /* Declare stream for reading the example stream */
+        FileReadStream is(fp, readBuffer, sizeof(readBuffer));
 
-        int16_t value = getAdc(1);                                              // Gets the status of any generic GPIO pin
-        int16_t bpm = getBpm();                                                 // Gets the Heart rate from supported sensors.
-        int16_t cm = getCm();                                                   // Gets the distance from supported sensors.
-        int16_t lph = getLph();                                                 //  Gets the Flow from supported sensors.
+        /* Declare a JSON document. JSON document parsed will be stored in this variable */
+        Document d;
+
+        /* Parse example.json and store it in `d` */    
+        d.ParseStream(is);
+
+        /* Close the example.json file*/
+        Fclose(fp);
+
+        /* Create New Instance */
+        mqttObj broker1 = newMqtt(is);
+        /* Connect to broker */
+        mqttConnect(&broker1) ;
+        /* Publish to topic */
+        mqttPublish(&broker1, "topic"," Data to be sent") ;                                     // publish to thingers.io and send the data that needs to be sent
+
         return 0;
         
 }
