@@ -1,0 +1,6 @@
+{
+    "mqttbroker1": {
+      "brokerUrl": "148.251.91.245:8080",
+      "clientID" : "InfluxDB"
+    }
+}  
