@@ -6,15 +6,15 @@
         "clientID": "Shunya pi3"
     },
     "device":{
-        "deviceType": ""  ,
-        "deviceIdentifier": "" ,
-        "deviceDescription": "",
-        "deviceCredential": ""
+        "deviceType": "New device"  ,
+        "deviceIdentifier": "AddAccordingly" ,
+        "deviceDescription": "AddAccordingly",
+        "deviceCredential": "generate randomly"
     },
     "bucket":{
-        "bucketId":"",
-        "buckerName": "",
-        "bucketDescription": "",
+        "bucketId":"UserInput",
+        "buckerName": "UserInput",
+        "bucketDescription": "UserInput",
         "Enabled": "",
         "dataSource": ""
     }
