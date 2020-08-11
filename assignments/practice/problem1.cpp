@@ -129,6 +129,11 @@ int main ()
         /* Publish to topic and send the data to Thingers.io platform */
         mqttPublish(&broker1, "topic"," Data That needs to be sent") ;                                     // publish to thingers.io and send the data that needs to be sent
 
+        /*
+        Next reffer to problem1_Documentation.md for the steps to store data in buckets and show data 
+        to the dashboard 
+        */
+
         return 0;
         
 }
