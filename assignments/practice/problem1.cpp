@@ -21,6 +21,7 @@
 #include <iostream>
 #include <errno.h>
 #include <si/shunyaInterfaces.h>
+
 /* RapidJSON Includes */
 
 #include "include/rapidjson/document.h"
@@ -121,10 +122,12 @@ int main ()
 
         /* Create New Instance */
         mqttObj broker1 = newMqtt(is);
+        
         /* Connect to broker */
         mqttConnect(&broker1) ;
-        /* Publish to topic */
-        mqttPublish(&broker1, "topic"," Data to be sent") ;                                     // publish to thingers.io and send the data that needs to be sent
+
+        /* Publish to topic and send the data to Thingers.io platform */
+        mqttPublish(&broker1, "topic"," Data That needs to be sent") ;                                     // publish to thingers.io and send the data that needs to be sent
 
         return 0;
         

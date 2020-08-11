@@ -146,15 +146,11 @@ int main ()
         /* Close the example.json file*/
         Fclose(fp);
 
+        // Creates a new Influxdb Instance
+        influxdbObj testdb = newInfluxdb(is);
 
-
-        /* Create New Instance */
-        mqttObj broker1 = newMqtt(is);
-        /* Connect to broker */
-        mqttConnect(&broker1) ;
-        /* Publish to topic */    
-        mqttPublish(&broker1, "ADC Data","Value: %d \n HeartRate: %d \n Distance: %d \n Flow: %d\n UNIX Timestamp: %d", value,bpm,cm,lph,time);
-
+        // Send data to InfluxDB        
+        writeDbInflux (testdb,"Value: %d \n HeartRate: %d \n Distance: %d \n Flow: %d\n UNIX Timestamp: %d", value,bpm,cm,lph,time);
 
         /* Declare an object to store the JSON document in  */
         Document e;

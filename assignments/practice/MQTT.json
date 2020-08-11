@@ -4,19 +4,6 @@
         "userName": "Shunya",
         "password": "shunya",
         "clientID": "Shunya pi3"
-    },
-    "device":{
-        "deviceType": "New device"  ,
-        "deviceIdentifier": "AddAccordingly" ,
-        "deviceDescription": "AddAccordingly",
-        "deviceCredential": "generate randomly"
-    },
-    "bucket":{
-        "bucketId":"UserInput",
-        "buckerName": "UserInput",
-        "bucketDescription": "UserInput",
-        "Enabled": "",
-        "dataSource": ""
     }
 
 }  
