@@ -9,15 +9,15 @@ Configure a data bucket to store data from an specific MQTT topic just requires 
 
 ##### The next parameters needs to be configured: 
 
-**Bucket Id:** Unique identifier for the bucket.                  
-**Bucket name:** Use a representative name to remember the bucket scope, like WeatherData.        
-**Bucket description:** Fill here any description with more details, like Temperature and humidity in house.          
-**Enabled:** Data bucket recording can be enabled or disabled. Just switch it on to enable it.                                                                      
-**Data Source:** Commonly this defines the Thinger.io device or resource that will be subscribed by the server. In this situation "From MQTT Topic" must be placed                
-**MQTT Topic:** place here the MQTT topic that will be subscribed by the server                     
+* **Bucket Id:** Unique identifier for the bucket.                  
+* **Bucket name:** Use a representative name to remember the bucket scope, like WeatherData.        
+* **Bucket description:** Fill here any description with more details, like Temperature and humidity in house.          
+* **Enabled:** Data bucket recording can be enabled or disabled. Just switch it on to enable it.                                                                      
+* **Data Source:** Commonly this defines the Thinger.io device or resource that will be subscribed by the server. In this situation "From MQTT Topic" must be placed                
+* **MQTT Topic:** place here the MQTT topic that will be subscribed by the server                     
 > Use JSON as the payload type for the device messages stored by buckets.
 
-##### Review Bucket data
+### Review Bucket data
 
 Once the data bucket has been configured and the data is sent in **JSON** format, and it started to record data from a device or from write calls, it will display the information inside a table. 
 
